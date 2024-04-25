@@ -26,6 +26,7 @@ stages:
         tags: |
           $(tag)
 - stage: 'Deploy'
+  condition: "false" # skip this stage
   displayName: 'Deploy the container'
   dependsOn: Build
   jobs:
